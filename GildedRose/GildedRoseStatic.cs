@@ -93,21 +93,14 @@ namespace GildedRoseKata
 
         private static void ValidateConjured()
         {
-            // conjured items degrades 2x faster
-            int downgrade = 2;
-
-            // we don't want below zero quality
-            if (_item.Quality == 1)
-                downgrade = 1;
-
             // 1 downgrade quality 
-            DowngradeQuality(downgrade);
+            DowngradeQuality(2);
 
             // 2 downgrade Sale date
             DowngradeSellIn(1);
 
             // 3 conjured items degrades 2x faster
-            ValidateExpiredItems(downgrade);
+            ValidateExpiredItems(2);
         }
 
         #endregion
@@ -135,12 +128,16 @@ namespace GildedRoseKata
             // Quality can never be negative > 0
             if (_item.Quality > QUALITY_MIN)
                 _item.Quality -= number;
+            else
+                _item.Quality = QUALITY_MIN;
         }
         private static void UpgradeQuality(int number)
         {
             // Quality can never be greater than < 50
             if (_item.Quality < QUALITY_MAX)
                 _item.Quality += number;
+            else
+                _item.Quality = QUALITY_MAX;
         }
         private static void DowngradeSellIn(int number)
         {

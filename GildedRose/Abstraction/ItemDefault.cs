@@ -1,4 +1,4 @@
-﻿namespace GildedRoseKata.Pattern
+﻿namespace GildedRoseKata.Abstraction
 {
     internal class ItemDefault : BaseItem
     {
@@ -7,6 +7,7 @@
 
         public override void Validate()
         {
+            // 1 downgrade quality
             DowngradeQuality(1);
 
             // 2 downgrade sale date

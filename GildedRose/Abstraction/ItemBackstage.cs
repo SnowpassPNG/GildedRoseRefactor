@@ -1,4 +1,4 @@
-﻿namespace GildedRoseKata.Pattern
+﻿namespace GildedRoseKata.Abstraction
 {
     internal class ItemBackstage : BaseItem
     {

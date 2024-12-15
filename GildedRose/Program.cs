@@ -38,8 +38,8 @@ public class Program
                 Console.WriteLine("{0,-60} {1,-20} {2,-20}", items[j].Name, items[j].SellIn, items[j].Quality);
 
             Console.WriteLine("");
-            //GildedRoseAbstract.UpdateQuality(items);
-            GildedRoseStatic.UpdateQuality(items);
+            GildedRoseAbstract.UpdateQuality(items);
+            //GildedRoseStatic.UpdateQuality(items);
             //app.UpdateQuality();
         }
     }

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GildedRoseKata.Pattern
+﻿namespace GildedRoseKata.Abstraction
 {
     public abstract class BaseItem
     {
@@ -35,12 +28,16 @@ namespace GildedRoseKata.Pattern
             // Quality can never be negative > 0
             if (_item.Quality > QUALITY_MIN)
                 _item.Quality -= number;
+            else 
+                _item.Quality = QUALITY_MIN;
         }
         protected void UpgradeQuality(int number)
         {
-           // Quality can never be greater than < 50
+            // Quality can never be greater than < 50
             if (_item.Quality < QUALITY_MAX)
                 _item.Quality += number;
+            else
+                _item.Quality = QUALITY_MAX;
         }
         protected void DowngradeSellIn(int number)
         {

@@ -1,4 +1,4 @@
-﻿using GildedRoseKata.Pattern;
+﻿using GildedRoseKata.Abstraction;
 using System.Collections.Generic;
 
 namespace GildedRoseKata
